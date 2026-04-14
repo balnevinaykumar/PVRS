@@ -1,16 +1,15 @@
-import React from 'react'
+﻿import React from 'react'
+import footerLogo from '../assets/footer-logo.png'
 
-const logoSmall = 'https://framerusercontent.com/images/q2Y5TM0gdzNrTRONDeZNaxphO4.png?scale-down-to=512'
-
-export default function Footer(){
+export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-inner">
-        <div style={{display:'flex',alignItems:'center',gap:12}}>
-          <img src={logoSmall} alt="Partner" style={{height:28}} />
-          <div>Auralis — We elevate businesses with AI</div>
+        <div className="footer-brand">
+          <img src={footerLogo} alt="PVRS" style={{ height: 28 }} />
+          <div>PVRS - We elevate businesses with AI</div>
         </div>
-        <div className="legal">© {new Date().getFullYear()} Auralis. All rights reserved.</div>
+        <div className="legal">© {new Date().getFullYear()} PVRS. All rights reserved.</div>
       </div>
     </footer>
   )

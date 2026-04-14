@@ -1,11 +1,15 @@
 import React from 'react'
+import daniel from '../assets/team-daniel.jpg'
+import ethan from '../assets/team-ethan.jpg'
+import liam from '../assets/team-liam.jpg'
+import emily from '../assets/team-emily.jpg'
 
 export default function Team(){
   const members = [
-    {name:'Daniel Foster',role:'CEO', img:'https://framerusercontent.com/images/LMHHOuZ2Gf6ITDH0kgxvm6mzclQ.jpeg?scale-down-to=512'},
-    {name:'Ethan Walker',role:'Sales', img:'https://framerusercontent.com/images/zLsRpzTOydN0lZDv0Y9nOnXUhE.jpeg?scale-down-to=512'},
-    {name:'Liam Parker',role:'Developer', img:'https://framerusercontent.com/images/ydtQD6o8DeCWexskC8hHuHy7Hw.jpeg?scale-down-to=512'},
-    {name:'Emily Carter',role:'CCO', img:'https://framerusercontent.com/images/43ni9PGsRtjf3qW4LcpsCgS3k.jpeg?scale-down-to=512'}
+    {name:'Daniel Foster',role:'CEO', img:daniel},
+    {name:'Ethan Walker',role:'Sales', img:ethan},
+    {name:'Liam Parker',role:'Developer', img:liam},
+    {name:'Emily Carter',role:'CCO', img:emily}
   ]
   return (
     <section id="team" className="team">

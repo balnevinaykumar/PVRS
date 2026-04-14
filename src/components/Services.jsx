@@ -10,12 +10,19 @@ export default function Services(){
   return (
     <section id="services" className="services">
       <div className="container">
-        <h2>Our Services</h2>
+        <h2 className="section-title">Our Services</h2>
         <div className="service-grid">
           {items.map((i, idx)=> (
             <article key={i.title} className={`service-card fade-up animate-delay-${(idx%3)+1}`}>
-              <h3>{i.title}</h3>
-              <p>{i.body}</p>
+              <div className="service-main">
+                <h3>{i.title}</h3>
+                <p>{i.body}</p>
+              </div>
+              <div className="service-preview">
+                <div className="preview-box">
+                  <div className="preview-thumb">{/* placeholder artwork */}</div>
+                </div>
+              </div>
             </article>
           ))}
         </div>

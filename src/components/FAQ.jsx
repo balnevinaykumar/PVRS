@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function FAQ(){
   const q = [
-    'What makes Auralis unique?',
-    'Is my company a good fit for Auralis?',
+    'What makes PVRS unique?',
+    'Is my company a good fit for PVRS?',
     'How does your subscription model work?'
   ]
   return (

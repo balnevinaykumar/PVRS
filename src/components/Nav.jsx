@@ -43,6 +43,10 @@ export default function Nav() {
               </li>
             ))}
           </ul>
+
+          <a className="nav-cta" href="#contact" onClick={() => setOpen(false)}>
+            Get template
+          </a>
         </div>
       </div>
     </nav>

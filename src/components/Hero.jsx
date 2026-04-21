@@ -1,6 +1,6 @@
 import React from 'react'
 
-const trustLogos = ['IPSUM', 'LOOO', 'Logoipsum', 'LOGO']
+const trustLogos = ['IPSUM', 'LOOO', 'Logoipsum', 'LOGO', 'IPSUM', 'LOOO', 'Logoipsum', 'LOGO']
 
 export default function Hero() {
   return (
@@ -8,7 +8,11 @@ export default function Hero() {
       <div className="hero-noise" aria-hidden />
       <div className="container hero-shell">
         <div className="hero-inner fade-up animate-delay-1">
-          <h1>We elevate your business using Artificial Intelligence.</h1>
+          <h1>
+            <span className="hero-line hero-line-muted">We elevate your business</span>
+            <br />
+            <span className="hero-line hero-line-muted">using Artificial Intelligence.</span>
+          </h1>
           <p>
             We elevate and grow organizations using top-tier Artificial Intelligence solutions.
           </p>
@@ -24,12 +28,14 @@ export default function Hero() {
 
         <div className="trust-strip fade-up animate-delay-3">
           <p className="trust-label">You&apos;re in good company</p>
-          <div className="trust-logos" aria-label="Client logos">
-            {trustLogos.map((logo) => (
-              <span key={logo} className="trust-logo">
-                {logo}
-              </span>
-            ))}
+          <div className="trust-marquee" aria-label="Client logos">
+            <div className="trust-marquee-track">
+              {trustLogos.map((logo, index) => (
+                <span key={`${logo}-${index}`} className="trust-logo">
+                  {logo}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

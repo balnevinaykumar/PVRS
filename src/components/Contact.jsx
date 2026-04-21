@@ -57,37 +57,86 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact contact-center">
-      <div className="container contact-shell">
+      <div className="container contact-wrap">
         <div className="contact-copy">
-          <h1 className="section-title">Get in touch</h1>
+          <div className="contact-eyebrow">Contact</div>
+          <h2 className="section-title">Get in touch!</h2>
           <p>
-            Tell us about your workflow, goals, and the kind of AI support you want to build. We will
-            get back to you with the right next step.
+            We&apos;d love to talk about how we can integrate AI into your business. Leave us a
+            message and we&apos;ll get back to you within 24 hours to schedule a call!
           </p>
         </div>
 
-        <form className="contact-form animated" onSubmit={submit} noValidate>
-          <div className="row">
-            <div style={{ flex: 1 }}>
-              <input className={errors.first ? 'error' : ''} placeholder="First name" value={form.first} onChange={(event) => setForm({ ...form, first: event.target.value })} />
-              {errors.first && <div className="field-error">{errors.first}</div>}
-            </div>
-            <div style={{ flex: 1 }}>
-              <input placeholder="Last name" value={form.last} onChange={(event) => setForm({ ...form, last: event.target.value })} />
-            </div>
-          </div>
-          <input className={errors.email ? 'error' : ''} placeholder="Email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} />
-          {errors.email && <div className="field-error">{errors.email}</div>}
-          <input placeholder="Phone" value={form.phone} onChange={(event) => setForm({ ...form, phone: event.target.value })} />
-          <textarea className={errors.message ? 'error' : ''} placeholder="Tell us what you want to automate" rows="5" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} />
-          {errors.message && <div className="field-error">{errors.message}</div>}
-          <div className="contact-actions">
-            <button className="btn primary" disabled={loading}>{loading ? 'Sending...' : 'Submit'}</button>
-          </div>
+        <div className="contact-shell">
+          <div className="contact-frame contact-frame-left" aria-hidden="true" />
+          <div className="contact-frame contact-frame-right" aria-hidden="true" />
 
-          {status === 'thanks' && <div className="muted center">Thanks, we received your message.</div>}
-          {status === 'error' && <div className="muted center">Something went wrong. Please try again.</div>}
-        </form>
+          <form className="contact-form animated" onSubmit={submit} noValidate>
+            <div className="row">
+              <label className="contact-field">
+                <span>First Name</span>
+                <input
+                  className={errors.first ? 'error' : ''}
+                  placeholder="Jane"
+                  value={form.first}
+                  onChange={(event) => setForm({ ...form, first: event.target.value })}
+                />
+              </label>
+              {errors.first && <div className="field-error">{errors.first}</div>}
+              <label className="contact-field">
+                <span>Last Name</span>
+                <input
+                  placeholder="Smith"
+                  value={form.last}
+                  onChange={(event) => setForm({ ...form, last: event.target.value })}
+                />
+              </label>
+            </div>
+
+            <div className="row">
+              <label className="contact-field">
+                <span>Email</span>
+                <input
+                  className={errors.email ? 'error' : ''}
+                  placeholder="jane@company.com"
+                  value={form.email}
+                  onChange={(event) => setForm({ ...form, email: event.target.value })}
+                />
+                {errors.email && <div className="field-error">{errors.email}</div>}
+              </label>
+
+              <label className="contact-field">
+                <span>Phone</span>
+                <input
+                  placeholder="+91 98765 43210"
+                  value={form.phone}
+                  onChange={(event) => setForm({ ...form, phone: event.target.value })}
+                />
+              </label>
+            </div>
+
+            <label className="contact-field contact-field-full">
+              <span>Message</span>
+              <textarea
+                className={errors.message ? 'error' : ''}
+                placeholder="Hi team PVRS, I'm reaching out for..."
+                rows="5"
+                value={form.message}
+                onChange={(event) => setForm({ ...form, message: event.target.value })}
+              />
+              {errors.message && <div className="field-error">{errors.message}</div>}
+            </label>
+
+            <div className="contact-actions">
+              <button className="btn primary contact-submit" disabled={loading}>
+                {loading ? 'Sending...' : 'Submit'}
+              </button>
+            </div>
+
+            {status === 'thanks' && <div className="muted center">Thanks, we received your message.</div>}
+            {status === 'error' && <div className="muted center">Something went wrong. Please try again.</div>}
+          </form>
+        </div>
       </div>
     </section>
   )

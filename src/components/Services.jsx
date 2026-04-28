@@ -86,8 +86,8 @@ function ChatbotDemo({ service }) {
 }
 
 function VoiceDemo() {
-  const leftBars = [44, 52, 70, 88, 64, 56, 74, 48, 60, 84, 68, 50]
-  const rightBars = [48, 62, 76, 90, 68, 54, 80, 60, 72, 86, 58, 46]
+  const leftBars = [34, 48, 62, 78, 92, 76, 66, 72, 82, 64, 74, 88, 70, 52]
+  const rightBars = [38, 54, 68, 84, 94, 78, 64, 74, 86, 72, 80, 90, 74, 58]
 
   return (
     <div className="service-demo service-demo-voice">

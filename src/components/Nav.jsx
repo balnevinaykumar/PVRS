@@ -45,7 +45,7 @@ export default function Nav() {
           </ul>
 
           <a className="nav-cta" href="#contact" onClick={() => setOpen(false)}>
-            Get template
+            Get in touch
           </a>
         </div>
       </div>

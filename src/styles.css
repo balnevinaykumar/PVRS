@@ -537,42 +537,47 @@ section {
 .chatbot-shell {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   height: 100%;
+  min-height: 278px;
   padding: 10px 4px;
 }
 
 .chatbot-top {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-height: 96px;
-  margin-bottom: 2px;
-  overflow: hidden;
+  min-height: 96px;
   opacity: 1;
-  transform: translateY(0);
   transition:
-    max-height 520ms cubic-bezier(0.22, 1, 0.36, 1),
     opacity 360ms ease,
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    margin-bottom 520ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .service-demo-chatbot:hover .chatbot-top,
 .service-demo-chatbot:focus-within .chatbot-top {
-  max-height: 0;
-  margin-bottom: 0;
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-12px);
 }
 
 .chatbot-bottom {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 116px;
+  bottom: 10px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  min-height: 0;
+  transition: top 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-demo-chatbot:hover .chatbot-bottom,
+.service-demo-chatbot:focus-within .chatbot-bottom {
+  top: 10px;
 }
 
 .chatbot-userline,
@@ -651,21 +656,19 @@ section {
 }
 
 .chatbot-reply-wrap {
+  margin-top: auto;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(10px);
   transition:
     max-height 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 360ms ease,
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 360ms ease;
 }
 
 .service-demo-chatbot:hover .chatbot-reply-wrap,
 .service-demo-chatbot:focus-within .chatbot-reply-wrap {
-  max-height: 88px;
+  max-height: 96px;
   opacity: 1;
-  transform: translateY(0);
 }
 
 .chatbot-graph {
@@ -740,7 +743,7 @@ section {
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 7px;
   height: 124px;
   flex: 1;
 }
@@ -754,19 +757,13 @@ section {
 }
 
 .voice-band-bar {
-  width: 4px;
-  min-height: 22px;
+  width: 2px;
+  min-height: 20px;
   border-radius: 999px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(252, 150, 76, 0.9));
-  box-shadow: 0 0 12px rgba(252, 150, 76, 0.12);
-}
-
-.voice-band-bar:nth-child(2n) {
-  animation-delay: 0.16s;
-}
-
-.voice-band-bar:nth-child(3n) {
-  animation-delay: 0.32s;
+  box-shadow:
+    0 0 8px rgba(252, 150, 76, 0.18),
+    0 0 16px rgba(252, 150, 76, 0.08);
 }
 
 .voice-center {
@@ -789,6 +786,23 @@ section {
   height: 140px;
   border: 1px solid rgba(252, 150, 76, 0.24);
   box-shadow: 0 0 24px rgba(252, 150, 76, 0.15);
+}
+
+.voice-center-ring-outer::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 300deg,
+    rgba(255, 241, 228, 0.98) 314deg,
+    rgba(252, 150, 76, 0.98) 324deg,
+    transparent 338deg 360deg
+  );
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px));
+  animation: voiceRingSpark 3.4s linear infinite;
 }
 
 .voice-center-ring-inner {
@@ -1010,6 +1024,16 @@ section {
   50% {
     transform: scale(1.02);
     opacity: 0.92;
+  }
+}
+
+@keyframes voiceOrbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 

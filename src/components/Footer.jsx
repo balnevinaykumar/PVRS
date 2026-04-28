@@ -34,8 +34,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <div className="footer-bottom-left">© {new Date().getFullYear()} PVRS Inc.</div>
-        <div className="footer-bottom-right">Template by PVRS</div>
+        <div className="footer-bottom-right">© {new Date().getFullYear()} PVRS Inc.</div>
+        
       </div>
     </footer>
   )

@@ -2,9 +2,9 @@
 
 export default function Pricing() {
   const plans = [
-    { name: 'Basic', price: '$997', note: '/month' },
-    { name: 'Professional', price: '$3997', note: '/month' },
-    { name: 'Enterprise', price: 'Custom', note: '/month' },
+    { name: 'Freemium', price: '₹ 0', note: 'INR / month' },
+    { name: 'Professional', price: '₹ 2000', note: 'INR / month' },
+    { name: 'Enterprise', price: 'Custom', note: 'INR / month' },
   ]
 
   return (

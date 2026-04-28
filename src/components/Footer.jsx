@@ -6,9 +6,9 @@ export default function Footer() {
         <div className="footer-col">
           <h3>About Us</h3>
           <div className="footer-item-label">Email</div>
-          <a href="mailto:hello@pvrs.com" className="footer-link">hello@pvrs.com ↗</a>
+          <a href="mailto:pvrsprvtltd@gmail.com" className="footer-link">pvrsprvtltd@gmail.com ↗</a>
           <div className="footer-item-label">Phone</div>
-          <a href="tel:+91203439223" className="footer-link">+91 20 343 9223 ↗</a>
+          <a href="tel:+916303008365" className="footer-link">+91 630 300 8365 ↗</a>
         </div>
         <div className="footer-col">
           <h3>Links</h3>
@@ -22,10 +22,10 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h3>Social Media</h3>
-          <a href="#" className="footer-link">LinkedIn</a>
-          <a href="#" className="footer-link">Youtube</a>
-          <a href="#" className="footer-link">X/Twitter</a>
-          <a href="#" className="footer-link">Instagram</a>
+          <a href="https://www.linkedin.com/" className="footer-link">LinkedIn</a>
+          <a href="https://www.youtube.com/" className="footer-link">Youtube</a>
+          <a href="https://x.com/" className="footer-link">X/Twitter</a>
+          <a href="https://www.instagram.com/" className="footer-link">Instagram</a>
         </div>
         <div className="footer-col">
           <h3>Legal</h3>

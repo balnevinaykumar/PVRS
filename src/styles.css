@@ -1650,7 +1650,7 @@ section {
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   padding: 14px 0 0;
   color: rgba(255, 255, 255, 0.56);
@@ -1658,7 +1658,7 @@ section {
 }
 
 .footer-bottom-right {
-  text-align: right;
+  text-align: center;
 }
 
 .slide-in,

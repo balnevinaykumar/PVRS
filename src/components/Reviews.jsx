@@ -5,28 +5,28 @@ import james from '../assets/review-james.jpg'
 export default function Reviews() {
   const reviews = [
     {
-      brand: 'logoipsum',
+      brand: 'TechCorp',
       quote:
         'Our AI-driven voice assistant developed by PVRS now handles all incoming customer support queries instantly, 24/7.',
       author: 'James Harrington',
-      role: 'CEO - LogoIpsum',
+      role: 'CEO - TechCorp',
       image: james,
     },
     {
-      brand: 'Logoipsum',
+      brand: 'CloudStart',
       quote:
         'PVRS automated a large part of our workflows, resulting in a significant increase in productivity and a huge decrease in cost.',
       author: 'Emma Castillo',
-      role: 'Founder - LogoIpsum',
+      role: 'Founder - CloudStart',
       image: emma,
       featured: true,
     },
     {
-      brand: 'Logoipsum',
+      brand: 'DataMinds',
       quote:
         'PVRS AI consulting helped us redesign operations and reduce manual work. We would highly recommend their team.',
       author: 'Liam Bennett',
-      role: 'CTO - LogoIpsum',
+      role: 'CTO - DataMinds',
       image: james,
     },
   ]

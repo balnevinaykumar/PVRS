@@ -7,7 +7,6 @@ export default function Nav() {
     { label: 'Process', href: '#process' },
     { label: 'Industries', href: '#industries' },
     { label: 'Pricing', href: '#pricing' },
-    { label: 'Team', href: '#team' },
     { label: 'Contact', href: '#contact' },
     { label: 'FAQ', href: '#faq' },
   ]

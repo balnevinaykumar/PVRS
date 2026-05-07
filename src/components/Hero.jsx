@@ -1,6 +1,6 @@
 import React from 'react'
 
-const trustLogos = ['IPSUM', 'LOOO', 'Logoipsum', 'LOGO', 'IPSUM', 'LOOO', 'Logoipsum', 'LOGO']
+const trustLogos = ['TechCorp', 'AI Solutions', 'CloudStart', 'InnovateTech', 'VentureLabs', 'DataMinds', 'QuantumAI', 'Future Systems']
 
 export default function Hero() {
   return (

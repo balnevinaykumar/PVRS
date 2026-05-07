@@ -6,7 +6,6 @@ import Process from './components/Process'
 import Industries from './components/Industries'
 import Pricing from './components/Pricing'
 import Reviews from './components/Reviews'
-import Team from './components/Team'
 import Contact from './components/Contact'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
@@ -127,7 +126,6 @@ function App(){
         <Industries />
         <Pricing />
         <Reviews />
-        <Team />
         <Contact />
         <FAQ />
       </main>

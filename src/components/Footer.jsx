@@ -16,7 +16,6 @@ export default function Footer() {
           <a href="#process" className="footer-link">Process</a>
           <a href="#industries" className="footer-link">Industries</a>
           <a href="#pricing" className="footer-link">Pricing</a>
-          <a href="#team" className="footer-link">Team</a>
           <a href="#contact" className="footer-link">Contact</a>
           <a href="#faq" className="footer-link">FAQ</a>
         </div>
